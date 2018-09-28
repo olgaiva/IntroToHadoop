@@ -17,7 +17,7 @@ test_file_name = sys.argv[3] # Name of file which will contain subset
 test_set_lines = []
 
 with open(full_file, 'r') as fr:
-    test_set_lines = [fr.readline() for i in range(num_lines)]
+    test_set_lines = [fr.readline() for i in range(num_lines+1)]
     i = num_lines
     line = test_set_lines[-1]
     while (line):

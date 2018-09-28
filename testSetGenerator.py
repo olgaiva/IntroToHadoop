@@ -32,7 +32,7 @@ with open(full_file, 'r') as fr:
     test_set_lines = []
     line_index = None
     random_line = ""
-    for i in range(0, num_lines):
+    for i in range(0, num_lines+1):
         while (line_index in line_indeces):
             offset = random.randrange(0,full_file_size)
             fr.seek(offset)
