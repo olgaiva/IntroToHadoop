@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# simpleTestSetPartitioner.py
+# simpleTestSetGenerator.py
 
 # This produces results which are closer to "true" randomness
 # than testSetGenerator.py. Simpler, but much slower

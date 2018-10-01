@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-# testSetPartitioner.py
+# testSetGenerator.py
 
 import os
 import sys
 import random
 
-# Insertion sort to appropriately order test set
-def insert_sort(num_list, num):
+
+def insertSort(values_list, value):
     index = 0
-    if not(num_list):
+    if not(values_list):
         return index
-    for i in range(len(num_list)):
-        if num_list[i] < num:
+    for i in range(len(values_list)):
+        if values_list[i] < value:
             index = i + 1
-    return index 
+    return index
+
 
 # Requires 3 arguments:
 full_file = sys.argv[1] # File which contains full set of lines
@@ -43,7 +44,7 @@ with open(full_file, 'r') as fr:
                 random_line = fr.readline()
             line_index = fr.tell()
 
-        order = insert_sort(line_indeces, line_index)
+        order = insertSort(line_indeces, line_index)
         line_indeces.insert(order, line_index)
         test_set_lines.insert(order, random_line)
 
