@@ -12,5 +12,5 @@ for line in sys.stdin:
     category_and_sales.insert(index, values)
 
 for (category, price) in category_and_sales:
-    print(category + ' ' + price)
+    print(category + '\t' + price)
     
