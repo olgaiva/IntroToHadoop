@@ -47,6 +47,7 @@ with open(full_file, 'r') as fr:
         line_indeces.insert(order, line_index)
         test_set_lines.insert(order, random_line)
 
-for line in test_set_lines:
-    print(line)
+    for line in test_set_lines:
+        sys.stdout.write(line)
+
             
