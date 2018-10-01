@@ -5,7 +5,7 @@ import os
 import sys
 import random
 
-
+# Insertion sort to appropriately order test set
 def insertSort(values_list, value):
     index = 0
     if not(values_list):
@@ -19,7 +19,6 @@ def insertSort(values_list, value):
 # Requires 3 arguments:
 full_file = sys.argv[1] # File which contains full set of lines
 num_lines = int(sys.argv[2]) # Size of subset
-test_file_name = sys.argv[3] # Name of file which will contain subset
 
 full_file_size = os.path.getsize(full_file)
 
@@ -48,6 +47,6 @@ with open(full_file, 'r') as fr:
         line_indeces.insert(order, line_index)
         test_set_lines.insert(order, random_line)
 
-with open(test_file_name, "w+") as fw:
-    fw.write("".join(test_set_lines))
+for line in test_set_lines:
+    print(line)
             
