@@ -1,4 +1,4 @@
-#!/usr/bin/env/python3
+#!/usr/bin/python3
 # sumByCategoryReducer.py
 # Can I make this a general reducer for this type of problem??
 
@@ -10,9 +10,12 @@ for line in sys.stdin:
     category = line_values[0]
     value = float(line_values[1])
     if category in values_dict:
-        values_dict[category] = values_dict[category] + float(value)
+        values_dict[category] = values_dict[category] + value
     else:
         values_dict[category] = value
 
-for category, total in values_dict.items():
+sorted_values_dict = sorted(values_dict.items(), key=lambda x: x[0])
+for line in sorted_values_dict:
+    category = line[0]
+    total = line[1]
     print(category + ' ' + str(total))

@@ -1,16 +1,18 @@
-#!/usr/bin/env/python3
+#!/usr/bin/python3
 # purchasesMapper.py
 
 import sys
-import insertSort
 
-category_and_sales = []
+sales_by_category = []
 for line in sys.stdin:
     line_values = line.rstrip().split('\t')
-    values = (line_values[3], line_values[4])
-    index = insertSort.insertSort(category_and_sales, values)
-    category_and_sales.insert(index, values)
+    category = line_values[3]
+    price = line_values[4]
 
-for (category, price) in category_and_sales:
-    print(category + '\t' + price)
+    sales_by_category.append(category + '\t' + price)
+
+sales_by_category.sort()
+
+for line in sales_by_category:
+    print(line)
     
