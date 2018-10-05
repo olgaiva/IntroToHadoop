@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # simpleTestSetGenerator.py
 
 # This produces results which are closer to "true" randomness
